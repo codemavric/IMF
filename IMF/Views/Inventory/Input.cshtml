@@ -1,0 +1,25 @@
+﻿@model IMF.Models.IMFInventory
+
+@{
+    ViewBag.Title = "Calculate Selling Price";
+}
+
+<h2>Calculate Selling Price</h2>
+
+
+
+@using (Html.BeginForm())
+
+{
+
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+<p> Enter in cost price: </p>
+@Html.EditorFor(m => m.costPrice)
+
+<p> Enter in markup: </p>
+@Html.EditorFor(m => m.markup) <br/> 
+
+<input type="submit" value="Calculate Selling Price" />
+
+}
